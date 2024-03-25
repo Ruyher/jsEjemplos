@@ -70,3 +70,16 @@ function ejercicio5(){
     }
     console.log("El factorial es: "+ pro);
 }
+function ejercicio6(){
+    
+    var numero= prompt("Ingrese un número para determinar si es par o impar.");
+    var pancho= numero %2;
+
+    if(pancho = 0){
+        console.log("El número es par");
+    }
+    else{
+        console.log("El numero es impar");
+    }
+
+}
