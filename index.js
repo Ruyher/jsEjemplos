@@ -61,3 +61,13 @@ function ejercicio4(){
     }
 
 }
+function ejercicio5(){
+    var factorial= prmpt("Ingrese un número para hallar su factorial.")
+
+    for (let i = 1; i < factorial.length; i++) {
+        console.log(factorial[i]);
+    }
+    if(prmpt=i){
+        console.log(prmpt*i);
+    }
+}
