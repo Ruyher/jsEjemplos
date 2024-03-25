@@ -73,11 +73,15 @@ function ejercicio5(){
 function ejercicio6(){
     
     var numero= prompt("Ingrese un número para determinar si es par o impar.");
-    var pancho= numero%2;
+    var resto= numero%2;
 
-    if(pancho = 0){
+    if(resto = 0){
         console.log("El número es par");
     }
+    else if(numero=0){
+        console.log("El número introducido es invalido.");
+    }
+
     else{
         console.log("El numero es impar");
     }
