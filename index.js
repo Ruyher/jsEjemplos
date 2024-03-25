@@ -44,7 +44,7 @@ function ejercicio4(){
 'E', 'T'];
 
     if(pos>0 && pos<99999999){
-        var letrauser=prmpt("ingrese letra de su DNI");
+        var letrauser=prompt("ingrese letra de su DNI");
         var letra = letrasDNI[letrauser];
 
         if(letra == letrauser){
@@ -62,12 +62,11 @@ function ejercicio4(){
 
 }
 function ejercicio5(){
-    var factorial= prmpt("Ingrese un número para hallar su factorial.")
+    var factorial= prompt("Ingrese un número para hallar su factorial.");
 
-    for (let i = 1; i < factorial.length; i++) {
-        console.log(factorial[i]);
+    let pro = 1;
+    for (let i = 1; i <= factorial; i++) {
+       pro = pro *i
     }
-    if(prmpt=i){
-        console.log(prmpt*i);
-    }
+    console.log("El factorial es: "+ pro);
 }
