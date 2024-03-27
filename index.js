@@ -88,17 +88,17 @@ function ejercicio6(){
 
 }
 function ejercicio7(){
-    var ing = prompt("Ingrese un argumento.");
+   
+    let txt = ing.trim();
+    let may = 0;
+    let min = 0;
 
-    var mayusculas=("Q, W, E, R, T, Y, U, I, O, P, A, S, D, F, G, H, J, K, L, Ñ, Z, X, C, V, B, N, M");
-
-    var minusculas= ("q, w, e, r, t, y, u, i, o, p, a, s, d, f, g, h, j, k, l, ñ, z, x, c, v, b, n, m");
-
-    if(prompt= mayusculas){
-        console.log("El argumento sólo posee mayúsculas.");
+for (let i = 0; i < txt.length; i++) {
+    if (txt.charAt(i) === txt.charAt(i).toUpperCase()) {
+        may++;
+    } else if (txt.charAt(i) === txt.charAt(i).toLowerCase()) {
+        min++;
     }
-    else if(prompt= minusculas){
-        console.log("El argumento sólo posee minúsculas.");
-    }
 
+}
 }
