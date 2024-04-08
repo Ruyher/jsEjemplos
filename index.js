@@ -89,7 +89,15 @@ function ejercicio6(){
 }
 function ejercicio7(){
    
-    let txt = ing.trim();
+    let txt = prompt("Ingrese texto.");
+
+    let result = mayumin(txt);
+
+    console.log(result);
+
+}
+
+function mayumin(txt) {
     let may = 0;
     let min = 0;
 
@@ -101,4 +109,13 @@ for (let i = 0; i < txt.length; i++) {
     }
 
 }
+    if(may=0){
+        return("El texto sólo contiene minúsculas.");
+    }
+    else if(min=0){
+        return("El texto sólo contiene mayúsculas");
+    }
+    else{
+        return("El texto contiene mayúsculas y minúsculas.");
+    }
 }
