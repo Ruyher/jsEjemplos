@@ -130,7 +130,7 @@ function espalindromo(txt){
     
     var texto= txt.toLowerCase().replace(/[^a-z]/g, '');
 
-    var invertir= texto.split('').reverse.join('');
+    var invertir= texto.split('').reverse().join('');
 
     if(txt==invertir){
         return "Es palíndromo."
