@@ -125,6 +125,7 @@ function ejercicio8(){
     
     var result=(espalindromo(txt));
 
+    alert(result);
 }
 function espalindromo(txt){
     
