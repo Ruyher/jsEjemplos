@@ -109,10 +109,11 @@ for (let i = 0; i < txt.length; i++) {
     }
 
 }
-    if(may=0){
+    if(may==0){
         return("El texto sólo contiene minúsculas.");
+
     }
-    else if(min=0){
+    else if(min==0){
         return("El texto sólo contiene mayúsculas");
     }
     else{
