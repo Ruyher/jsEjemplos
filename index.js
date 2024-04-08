@@ -120,3 +120,21 @@ for (let i = 0; i < txt.length; i++) {
         return("El texto contiene mayúsculas y minúsculas.");
     }
 }
+function ejercicio8(){
+    var txt= prompt("Ingrese una palabra u oración para determinar si es palíndromo o no.");
+    
+    var result=(espalindromo(txt));
+
+}
+function espalindromo(txt){
+    
+    var texto= txt.toLowerCase().replace(/[^a-z]/g, '');
+
+    var invertir= texto.split('').reverse.join('');
+
+    if(txt==invertir){
+        return "Es palíndromo."
+    }  else{
+        return "No es palíndromo."
+    }
+}
