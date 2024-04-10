@@ -139,26 +139,24 @@ function espalindromo(txt){
         return "No es palíndromo."
     }
 }
-function lanzarDado() {
-    return Math.floor(Math.random() * 6) + 1;
-  }
-  
+function lanzarDados() {
+    // Función para simular el lanzamiento de un dado
+    function lanzarDado() {
+        return Math.floor(Math.random() * 6) + 1; // Número aleatorio entre 1 y 6
+    }
 
-  function simularLanzamiento() {
-    let d1 = lanzarDado();
-    let d2 = lanzarDado();
-    let suma = d1 + d2;
-    return suma;
-  }
-  
-  let conteoSumas = new Array(11).fill(0);
-  
-  for (let i = 0; i < 36000; i++) {
-    let suma = simularLanzamiento();
-    conteoSumas[suma - 2]++; 
-  }
-  
-  console.log("Resultado del conteo de las sumas de los dados:");
-  for (let i = 0; i < conteoSumas.length; i++) {
-    console.log(`Suma ${i + 2}: ${conteoSumas[i]} veces`);
-  }
+    // Array para almacenar el número de apariciones de cada suma
+    let conteoSumas = new Array(11).fill(0); // Índices de 0 a 11 representan sumas de 2 a 12
+
+    // Realizar 36,000 lanzamientos y contar las sumas
+    for (let i = 0; i < 36000; i++) {
+        let suma = lanzarDado() + lanzarDado();
+        conteoSumas[suma - 2]++; // Restamos 2 para ajustar el índice del array
+    }
+
+    // Imprimir resultados
+    console.log("Resultado del conteo de las sumas de los dados:");
+    for (let i = 0; i < conteoSumas.length; i++) {
+        console.log(`Suma ${i + 2}: ${conteoSumas[i]} veces`);
+    }
+}
