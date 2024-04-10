@@ -140,23 +140,28 @@ function espalindromo(txt){
     }
 }
 function lanzarDados() {
-    // Función para simular el lanzamiento de un dado
-    function lanzarDado() {
-        return Math.floor(Math.random() * 6) + 1; // Número aleatorio entre 1 y 6
-    }
-
-    // Array para almacenar el número de apariciones de cada suma
-    let conteoSumas = new Array(11).fill(0); // Índices de 0 a 11 representan sumas de 2 a 12
-
-    // Realizar 36,000 lanzamientos y contar las sumas
+    
+    let conteoSumas = [0,0,0,0,0,0,0,0,0,0,0,0,0]; 
+    let acumulador= 0;
     for (let i = 0; i < 36000; i++) {
-        let suma = lanzarDado() + lanzarDado();
-        conteoSumas[suma - 2]++; // Restamos 2 para ajustar el índice del array
+        let suma = simularLanzamiento();
+        conteoSumas[suma]++; 
     }
 
-    // Imprimir resultados
     console.log("Resultado del conteo de las sumas de los dados:");
-    for (let i = 0; i < conteoSumas.length; i++) {
-        console.log(`Suma ${i + 2}: ${conteoSumas[i]} veces`);
+    for (let i = 2; i < conteoSumas.length; i++) {
+        console.log(`Suma ${i}: ${conteoSumas[i]} veces`);
+        acumulador = acumulador + conteoSumas[i];
     }
+    console.log(acumulador);
+}
+function simularLanzamiento() {
+    let dado1 = lanzarDado();
+    let dado2 = lanzarDado();
+    let suma = dado1 + dado2;
+    return suma;
+}
+
+function lanzarDado() {
+    return Math.floor(Math.random() * 6) + 1; 
 }
